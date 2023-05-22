@@ -5,7 +5,7 @@
 
 - 👯 I’m looking for collaborations on **Research** and **Startup** projects
 
-- 📫 How to reach me **enmao.diao@duke.edu**
+- 📫 How to reach me **diao_em@hotmail.com**
 
 - 📄 Know about my experiences [https://diaoenmao.com/](https://diaoenmao.com/)
 
