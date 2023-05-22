@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=diaoenmao&label=Profile%20views&color=0e75b6&style=flat" alt="diaoenmao" /> </p>
 
-- 👯 I’m looking for collaborations on **Research and Startup projects**
+- 👯 I’m looking for collaborations on **Research** and **Startup** projects
 
 - 📫 How to reach me **enmao.diao@duke.edu**
 
