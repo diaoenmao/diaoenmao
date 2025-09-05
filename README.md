@@ -7,7 +7,7 @@
 
 - 📫 How to reach me **diao_em@hotmail.com**
 
-- 📄 Know about me [**diaoenmao.com**](diaoenmao.com)
+- 📄 Know about me [**diaoenmao.com**](https://diaoenmao.com/)
 
 
 <h3 align="left">Languages and Tools:</h3>
