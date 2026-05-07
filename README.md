@@ -79,11 +79,11 @@
   </tr>
 </table>
 
-[![github-readme-stats](https://github-readme-stats-five-alpha-58.vercel.app/api?username=diaoenmao&count_private=true&show_icons=true&include_all_commits=true&theme=default)](https://github.com/anuraghazra/github-readme-stats)
+[![github-readme-stats](https://github-readme-stats-five-alpha-58.vercel.app/api?username=diaoenmao&count_private=true&show_icons=true&include_all_commits=true&theme=default)](https://github.com/diaoenmao)
 
-[![github-readme-streak-stats](https://github-readme-streak-stats-liart-psi.vercel.app?user=diaoenmao)](https://github.com/DenverCoder1/github-readme-streak-stats)
+[![github-readme-streak-stats](https://github-readme-streak-stats-liart-psi.vercel.app?user=diaoenmao)](https://github.com/diaoenmao)
 
-[![github-profile-trophy](https://github-profile-trophy-dusky-psi.vercel.app/?username=diaoenmao)](https://github.com/ryo-ma/github-profile-trophy)
+[![github-profile-trophy](https://github-profile-trophy-dusky-psi.vercel.app/?username=diaoenmao)](https://github.com/diaoenmao)
 
 <!--
 **diaoenmao/diaoenmao** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
