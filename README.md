@@ -79,10 +79,11 @@
   </tr>
 </table>
 
+[![github-profile-trophy](https://github-profile-trophy-dusky-psi.vercel.app/?username=diaoenmao)](https://github.com/ryo-ma/github-profile-trophy)
 
-![Enmao's GitHub stats](https://github-readme-stats-five-alpha-58.vercel.app/api?username=diaoenmao&count_private=true&show_icons=true&include_all_commits=true&theme=default)
+[![github-readme-stats](https://github-readme-stats-five-alpha-58.vercel.app/api?username=diaoenmao&count_private=true&show_icons=true&include_all_commits=true&theme=default)](https://github.com/anuraghazra/github-readme-stats)
 
-<a href="https://git.io/streak-stats"><img src="https://github-readme-streak-stats-liart-psi.vercel.app?user=diaoenmao" alt="GitHub Streak" /></a>
+[![github-readme-streak-stats](https://github-readme-streak-stats-liart-psi.vercel.app?user=diaoenmao)](https://github.com/DenverCoder1/github-readme-streak-stats)
 
 <!--
 **diaoenmao/diaoenmao** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
