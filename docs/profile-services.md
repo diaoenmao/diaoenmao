@@ -121,8 +121,9 @@ the `deno.json` import map, so `api/index.ts` now imports the pinned dotenv modu
 using its direct URL. Streak production branch tracking was corrected from
 `main` to `vercel`, and the new version rebuilt in the production environment.
 
-The newer Stats code also changes its ranking calculation. The verified card
-shows A- rather than the older deployment's A++; the README does not override it.
+The newer Stats code also changes its ranking calculation. Initially the verified
+card showed A- rather than the older deployment's A++. The subsequent letter
+display option described below shows its base grade A, without changing the score.
 The four card URLs include `v=20261005` to avoid reusing old browser and GitHub
 Camo images after this service upgrade. This does not change their layouts.
 
@@ -169,3 +170,15 @@ formula, so its A++ is not directly comparable to the new A-. The source change
 does not mean contributions were lost. Keeping the other values constant, two
 counted reviews would produce a score of 76.70 and grade A. This calculation is
 illustrative; future cards also reflect changing counts and cached responses.
+
+## Base letter grade display
+
+At the owner's request, the README now uses `rank_icon=letter`. Stats fork commit
+`e457bef00dbc4645c744946e380c682874d63751` adds this optional display mode: A+, A, and A- all display A, and B+, B,
+and B- all display B. The visual label and SVG accessibility title use the same
+base grade. Counts, the calculation, percentile, and progress ring are unchanged;
+the default mode still shows the original grade including its plus/minus suffix.
+The existing Stats renderer and API suites passed: 38 tests and five snapshots.
+The [production deployment](https://vercel.com/diaoenmaos-projects/github-readme-stats/5jHXH6qqJS9MZWZPDincqGsBtiUk)
+is Ready. A direct production request returned HTTP 200 with both its visible
+rank and SVG title showing A and valid live statistics.

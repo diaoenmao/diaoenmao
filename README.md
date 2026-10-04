@@ -82,7 +82,7 @@
 
 <h3 align="left">GitHub Stats</h3>
 
-[![GitHub stats](https://github-readme-stats-five-alpha-58.vercel.app/api?username=diaoenmao&count_private=true&show_icons=true&include_all_commits=true&theme=default&disable_animations=true&cache_seconds=86400&v=20261005)](https://github.com/diaoenmao)
+[![GitHub stats](https://github-readme-stats-five-alpha-58.vercel.app/api?username=diaoenmao&count_private=true&show_icons=true&include_all_commits=true&theme=default&disable_animations=true&rank_icon=letter&cache_seconds=86400&v=20261005-rank-letter)](https://github.com/diaoenmao)
 
 <h3 align="left">Most Used Languages</h3>
 
