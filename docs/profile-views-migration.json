@@ -1,0 +1,14 @@
+{
+  "username": "diaoenmao",
+  "verified_count": 6651,
+  "verified_date": "2026-10-05",
+  "historical_estimate_added": 0,
+  "strategy": "Keep existing Komarev storage; add a Vercel relay with no base offset",
+  "upstream": "https://komarev.com/ghpvc/?username=diaoenmao",
+  "status": "deployed_and_verified",
+  "vercel_endpoint": "https://github-profile-views-counter-roan.vercel.app/api/views",
+  "vercel_project": "https://vercel.com/diaoenmaos-projects/github-profile-views-counter",
+  "verified_after_deployment": 6651,
+  "github_camo_http_status": 200,
+  "verified_after_github_proxy_request": 6652
+}

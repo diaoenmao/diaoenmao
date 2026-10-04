@@ -1,0 +1,5 @@
+{
+  "name": "diaoenmao-profile",
+  "private": true,
+  "scripts": { "preview": "python scripts/preview-profile.py" }
+}
