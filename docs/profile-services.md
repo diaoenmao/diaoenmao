@@ -25,14 +25,16 @@ that every first browser load succeeds.
 
 ## README changes
 
-- Consolidate 54 externally served tool icons into `assets/tools.svg` and retain
-  all 54 tools as grouped official links. With the new language card, the README
-  has six image resources rather than the previous 58.
+- Store all 54 tool icons locally in `assets/tools/`, preserving their order and
+  official links. Independent icons wrap to the available README width. This
+  replaces the earlier fixed grid in the combined `assets/tools.svg`.
 - Add **Most Used Languages** using the existing Stats deployment. The reference
   [damingerdai README](https://github.com/damingerdai/damingerdai) uses the same
   `/api/top-langs` endpoint with `layout=compact`.
-- Request up to 20 remaining languages for review, with compact layout, the existing default theme, and a 467 px
-  card width. Stats and language cards request one-day caching. Actual caching
+- Request up to 20 remaining languages for review, with compact layout, the existing default theme, and an 880 px
+  SVG rendered across the README width. The fork fits the compact legend columns
+  to the generation width and label lengths, instead of always using two columns.
+  Stats and language cards request one-day caching. Actual caching
   still depends on the fork, Vercel, and GitHub's Camo image proxy.
 - Disable card animations and preserve the original trophy layout parameters.
   Vercel remains the source of all four dynamic stats cards.
@@ -63,7 +65,9 @@ deployment to `54a7985aeefda00d5eadb55b80c17c7f976c37d2`, the unchanged README U
 returns all fourteen retained labels: Python, C, MATLAB, Java, JavaScript,
 Verilog, C#, PHP, R, Rust, ASP, C++, M, and Objective-C. See
 [the verified limit and update](language-inventory.md). These checks cannot
-establish every language the owner has used or knows.
+establish every language the owner has used or knows. ASP, M, and Objective-C
+were subsequently hidden at the owner's request, leaving eleven visible labels;
+C++ and C# remain included.
 
 ## Local preview
 
@@ -121,3 +125,47 @@ The newer Stats code also changes its ranking calculation. The verified card
 shows A- rather than the older deployment's A++; the README does not override it.
 The four card URLs include `v=20261005` to avoid reusing old browser and GitHub
 Camo images after this service upgrade. This does not change their layouts.
+
+## Language layout follow-up
+
+Stats fork commit `cbf4d77e9125f81162f76d48a7da3f8252a67c70` removes the hardcoded
+two-column compact legend. The renderer measures label widths, fits as many
+columns as the supplied card width permits, and adjusts the height for the rows.
+The [production deployment](https://vercel.com/diaoenmaos-projects/github-readme-stats/DnmpRVar4BgvhPrUSFx8eZTHzSDo)
+is Ready. A direct request returned HTTP 200 and an 880 × 165 SVG containing all
+eleven retained languages, with five legend items on each complete row.
+The language image uses `width="100%"` in the README. As a server-generated SVG,
+its columns are determined by `card_width`; changing the browser width scales the
+finished image rather than regenerating its layout. The separate tool icons do
+wrap with the browser width. The existing 34 renderer tests and one added wide
+card regression test passed, together with formatting and lint checks.
+
+## What the Stats grade means
+
+The current [`calculateRank.js`](https://github.com/diaoenmao/github-readme-stats/blob/54a7985aeefda00d5eadb55b80c17c7f976c37d2/src/calculateRank.js)
+uses six normalized metrics. Commits, PRs, issues, and reviews use
+`E(n, m) = 1 - 2 ** (-n / m)`. Stars and followers use `L(n, m) = n / (n + m)`.
+The total score is `100 * sum(weight * normalized_metric) / 12`.
+
+| Metric | Value used in this check | Normalization baseline | Weight | Score contribution |
+| --- | ---: | ---: | ---: | ---: |
+| All commits | 6,090 | 1,000 | 2 | 16.42 |
+| PRs | 76 | 50 | 3 | 16.28 |
+| Issues | 9 | 25 | 1 | 1.84 |
+| Reviews in the past year | 0 | 2 | 1 | 0.00 |
+| Stars | 531 | 50 | 4 | 30.46 |
+| Followers | 93 | 10 | 1 | 7.52 |
+| Total | | | 12 | 72.53 |
+
+With `include_all_commits=true`, the commit baseline is 1,000; otherwise it is
+250. Repository count and the card's "Contributed to" value do not enter the
+new grade. The algorithm's modeled percentile is `100 - score`, or 27.47 here.
+It does not fetch a real-time global distribution of GitHub accounts.
+
+The new thresholds are S at 99+, A+ at 87.5+, A at 75+, A- at 62.5+, B+ at
+50+, B at 37.5+, B- at 25+, C+ at 12.5+, and C below 12.5. There is no A++ grade.
+The former deployment used a different linear weighted count plus normal-CDF
+formula, so its A++ is not directly comparable to the new A-. The source change
+does not mean contributions were lost. Keeping the other values constant, two
+counted reviews would produce a score of 76.70 and grade A. This calculation is
+illustrative; future cards also reflect changing counts and cached responses.

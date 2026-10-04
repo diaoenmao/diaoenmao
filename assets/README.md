@@ -1,8 +1,9 @@
 # Icon sources
 
-`tools.svg` combines the 54 icons from the previous profile into one local SVG.
-It preserves the original order. The Seaborn icon now comes from Seaborn itself.
-The README's expandable list links to each tool's official site or documentation.
+`tools/` contains the 54 locally stored icons from the previous profile, in the
+original order. Each icon is a separate SVG so the README can fill the available
+width and wrap naturally, without a fixed number of columns. Every icon links to
+its official site or documentation. The Seaborn icon comes from Seaborn itself.
 
 - [Skill Icons](https://github.com/tandpfun/skill-icons): `skill-icons-LICENSE`
 - [Devicon](https://github.com/devicons/devicon): `devicon-LICENSE`
